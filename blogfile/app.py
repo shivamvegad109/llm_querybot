@@ -93,23 +93,45 @@ def main():
             file.truncate(0)  
         st.write("Document Deleted Successfully")
     st.components.v1.html(
-    """
-    <script>
-    window.embeddedChatbotConfig = {
-    chatbotId: "F_a-f9Ik3Bkr6bSa1rxZM",
-    domain: "www.chatbase.co"
-    }
-    </script>
-    <script
-    src="https://www.chatbase.co/embed.min.js"
-    chatbotId="F_a-f9Ik3Bkr6bSa1rxZM"
-    domain="www.chatbase.co"
-    defer>
-    </script>
-    """,
-    width=1000, 
-    height=600,
+        """
+        <div style="position: fixed; bottom: 10px; right: 10px; z-index: 10000;">
+            <script>
+                window.embeddedChatbotConfig = {
+                    chatbotId: "F_a-f9Ik3Bkr6bSa1rxZM",
+                    domain: "www.chatbase.co"
+                }
+            </script>
+            <script
+                src="https://www.chatbase.co/embed.min.js"
+                chatbotId="F_a-f9Ik3Bkr6bSa1rxZM"
+                domain="www.chatbase.co"
+                defer>
+            </script>
+        </div>
+        <style>
+            div[style*='position: fixed; bottom: 10px; right: 10px;'] {
+                width: 350px;
+                height: 500px;
+                z-index: 10000;  /* Ensure the chatbot stays on top */
+            }
+            @media (max-width: 768px) {
+                div[style*='position: fixed; bottom: 10px; right: 10px;'] {
+                    width: 300px;
+                    height: 400px;
+                }
+            }
+            @media (max-width: 480px) {
+                div[style*='position: fixed; bottom: 10px; right: 10px;'] {
+                    width: 250px;
+                    height: 350px;
+                }
+            }
+        </style>
+        """,
+        height=600,  # Adjust height to fit the content
+        scrolling=True,
     )
+
 
 if __name__ == "__main__":
     main()
