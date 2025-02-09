@@ -1,6 +1,6 @@
 # Blog Generator
 
-This is a web application built with Streamlit that allows users to generate blog content using the LLama 2 language model.
+This is a web application built with Streamlit that allows users to generate blog content using the LLama model.
 
 Python 3.12.2
 
@@ -53,7 +53,3 @@ Python 3.12.2
 ## Screenshots
 
 ![png1](./screenshot/blog.png)
-
-![png2](./screenshot/image.png)
-
-![png3](./screenshot/image-1.png)
